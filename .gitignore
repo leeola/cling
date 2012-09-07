@@ -1,6 +1,7 @@
 node_modules
 npm-debug.log
 .c9revisions
+.browserify_cache.json
 examples
 build
 r.coffee

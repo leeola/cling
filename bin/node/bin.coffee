@@ -9,7 +9,7 @@
 fs = require 'fs'
 path = require 'path'
 nomnom = require 'nomnom'
-resolve = require 'resolve'
+lib_main = require '../../lib/main'
 
 
 
@@ -26,11 +26,13 @@ nomnom.script 'cling'
 nomnom.help 'Start the cling server.'
 nomnom.options
   location:
+    default: 'localhost'
     abbr: 'l'
     metavar: 'LOCATION'
     help: 'Specify a hostname for cling to listen on.'
   
   port:
+    default: 3003
     abbr: 'p'
     metavar: 'PORT'
     help: 'Specify a port for cling to listen on.'
@@ -49,7 +51,7 @@ exec = (input) ->
   # Parse the opts, with a possible input override.
   opts = nomnom.parse input
   
-  console.log "Not implemented."
+  lib_main.start(opts)
 
 
 

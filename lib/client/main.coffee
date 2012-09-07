@@ -8,3 +8,10 @@
 
 
 console.log 'Hello Client'
+
+
+
+io = require 'socket.io-client'
+socket = io.connect()
+socket.on 'foo', (data) ->
+  console.log 'foo recieved!'

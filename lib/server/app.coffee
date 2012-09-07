@@ -13,6 +13,9 @@ flatiron = require 'flatiron'
 exports = module.exports = flatiron.app
 
 
+
 # Now call our configure/route modules so that they can set up this app.
 require './configure'
 require './route'
+# Note that ./io is initialized from the function found in `main.start()`.
+# This is because it needs to be initialized *after* the app has started.

@@ -21,6 +21,11 @@ app = require './app'
 start = (port=config.port) ->
   winston.info "Monitoring connections on port:#{port}"
   app.start port
+  
+  
+  # We're setting up io *after* the app is started, because socket.io needs
+  # that.
+  require './io'
 
 
 

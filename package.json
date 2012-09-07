@@ -30,7 +30,14 @@
     "walker": "1.0.3"
   },
   "dependencies": {
-    "nomnom": "1.5.x"
+    "nomnom": "1.5.x",
+    "bork": "0.0.x",
+    
+    "flatiron": "0.2.x",
+    "union": "0.3.x",
+    "winston": "0.6.x",
+    
+    "browserify": ""
   },
   "main": "./build/lib/index.js",
   "licenses": [

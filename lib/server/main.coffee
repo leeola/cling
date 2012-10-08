@@ -11,6 +11,10 @@ app = require './app'
 
 
 
+end = ->
+  app.server.close()
+
+
 # (port) -> undefined
 #
 # Params:
@@ -18,11 +22,12 @@ app = require './app'
 #
 # Desc:
 #   Start the web server.
-start = (port=config.port) ->
+start = (port=config.port, callback=->) ->
   winston.info "Monitoring connections on port:#{port}"
-  app.start port
+  app.start port, callback
 
 
 
 
+exports.end = end
 exports.start = start

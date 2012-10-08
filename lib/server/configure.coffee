@@ -30,8 +30,8 @@ app.http.before.push (req, res, next) ->
 
 # To attempt and keep coffee/js compatibility, we are going to use the
 # current file extension. This way if *this* file is a coffee file, it will
-# try and load `../client/main.coffee` and if this is a js file, it will try
-# and load `../client/main.js`
-app.http.before.push browserify "#{__dirname}/../client/main#{path.extname __filename}",
+# try and load `../client/index.coffee` and if this is a js file, it will try
+# and load `../client/index.js`
+app.http.before.push browserify "#{__dirname}/../client/index#{path.extname __filename}",
   cache: "#{__dirname}/../../.browserify_cache.json"
   verbose: true

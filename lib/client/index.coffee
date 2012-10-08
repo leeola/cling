@@ -5,6 +5,8 @@
 # MIT Licensed
 #
 
+console.log 'Hello Index'
 
 
 exports.main = require './main'
+exports.sandbox = require './sandbox'

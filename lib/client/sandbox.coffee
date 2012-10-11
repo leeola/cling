@@ -7,9 +7,6 @@
 
 
 
-console.log 'Hello from Sandbox'
-
-
 
 # Set up the eval environment.
 SANDBOX_SETUP = """
@@ -19,8 +16,10 @@ parent.__cling.sandbox = MSIE ?
   this :
   { eval: function (code) { return eval(code) }}
 
+/*
 // Set up our references.
-//this.console = {log: parent.__cling.log}
+this.console = {log: parent.__cling.log}
+*/
 </script>
 """
 
@@ -52,7 +51,6 @@ class Sandbox
   
   _log: (s) =>
     @_log.console.push s
-    console.log "sandbox: #{s}"
   
   eval: (code) ->
     __sandbox_eval code

@@ -37,7 +37,9 @@
     "union": "0.3.x",
     "winston": "0.6.x",
     
-    "browserify": ""
+    "browserify": "",
+    "socket.io": "0.9.x",
+    "socket.io-client": "0.9.x"
   },
   "main": "./build/lib/index.js",
   "licenses": [

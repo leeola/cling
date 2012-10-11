@@ -25,6 +25,11 @@ end = ->
 start = (port=config.port, callback=->) ->
   winston.info "Monitoring connections on port:#{port}"
   app.start port, callback
+  
+  
+  # We're setting up io *after* the app is started, because socket.io needs
+  # that.
+  require './io'
 
 
 

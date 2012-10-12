@@ -29,7 +29,7 @@ start = (port=config.port, callback=->) ->
   
   # We're setting up io *after* the app is started, because socket.io needs
   # that.
-  require './io'
+  #require './io'
 
 
 

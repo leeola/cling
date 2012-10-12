@@ -10,5 +10,5 @@ dork = require 'dork'
 
 
 exports.emighter = require './tests'
-exports.options = require '../.options'
+exports.options = require '../options'
 if require.main is module then dork.run()

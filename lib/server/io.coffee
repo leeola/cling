@@ -18,3 +18,7 @@ ios.sockets.on 'connection', (socket) ->
 
 ios.sockets.on 'disconnect', (socket) ->
   console.log 'Client disconnected.'
+
+
+
+exports.ios = ios

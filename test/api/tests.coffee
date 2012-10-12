@@ -6,7 +6,7 @@
 #
 dork = require 'dork'
 should = require 'should'
-require '../.options'
+require '../options'
 
 
 
@@ -18,6 +18,7 @@ describe 'Test Submission', ->
     server.main.start undefined, done
   
   it 'should something', (done) ->
+    
     http = require 'http'
     opts =
       host: 'cling.leeolayvar.c9.io',
@@ -35,10 +36,13 @@ describe 'Test Submission', ->
       
       res.on 'end', () ->
         done()
+      
+      res.on 'error', (error) ->
+        throw error
     
     req.end()
   
-  after_all ->
+  after_all () ->
     server.main.end()
 
 

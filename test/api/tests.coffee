@@ -12,17 +12,20 @@ require '../options'
 
 
 describe 'Test Submission', ->
-  server = require '../../lib/server'
+  server = undefined
   
   before_all (done) ->
+    server = require '../../lib/server'
     server.main.start undefined, done
   
   it 'should something', (done) ->
     
     http = require 'http'
     opts =
-      host: 'cling.leeolayvar.c9.io',
-      port: 80
+      #host: 'cling.leeolayvar.c9.io'
+      #port: 80
+      host: 'localhost'
+      port: 3003
       path: '/'
       method: 'GET'
     

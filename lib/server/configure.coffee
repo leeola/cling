@@ -35,4 +35,3 @@ app.http.before.push (req, res, next) ->
 app.http.before.push browserify "#{__dirname}/../client/main#{path.extname __filename}",
   cache: "#{__dirname}/../../.browserify_cache.json"
   verbose: true
-  watch: true

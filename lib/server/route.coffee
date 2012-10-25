@@ -4,13 +4,14 @@
 # Copyright (c) 2012 Lee Olayvar <leeolayvar@gmail.com>
 # MIT Licensed
 #
+lib = require '..'
 app = require './app'
-views = require './views'
+views = (require './views').load()
 
 
 
 
-# Our client connects.
+# Our browser client home.
 app.router.get '/', () ->
   @res.writeHead 200,
     'Content-Type': 'text/html'
@@ -42,9 +43,18 @@ app.router.get '/api/tests', ->
 
 
 app.router.post '/api/tests', ->
+  body = @req.body
   
-  # Check to ensure the test submission has valid context.
+  # Required
+  if not body.source?
+    @res.writeHead 400,
+      'Content-Type': 'text/plain'
+    @res.end 'Missing required argument "source".'
+    return
+  
+  # Do some lib work here to queue the test
+  rdata = {}
   
   @res.writeHead 200,
-    'Content-Type': 'text/plain'
-  @res.end 'Submitting a new test..'
+    'Content-Type': 'application/json'
+  @res.end JSON.stringify rdata

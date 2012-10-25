@@ -12,40 +12,27 @@ require '../options'
 
 
 request = (options={}, callback) ->
-  #options.host ?= 'cling.leeolayvar.c9.io'
-  #options.port ?= 80
-  options.host ?= 'localhost'
-  options.port ?= 3003
+  if process.env.C9_USER?
+    options.host ?= "#{process.env.C9_PROJECT}.#{process.env.C9_USER}.c9.io"
+    options.port ?= 80
+  else
+    options.host ?= 'localhost'
+    options.port ?= 3003
   options.path ?= '/'
   options.method ?= 'GET'
   options.headers ?= {}
-  
+  options.headers.Connection ?= 'close'
   
   http = require 'http'
-  
-  # This is the actual opts object that we are passing to the request
-  opts =
-    host: options.host
-    port: options.port
-    headers: options.headers
-  
   req = http.request options, (res) ->
-    
     data = ''
     res.setEncoding 'utf-8'
-    
     res.on 'data', (chunk) ->
       data += chunk
-    
     res.on 'end', () ->
-      # Parse our data..
       callback null, res, data
-    
     res.on 'error', (error) ->
       callback error, res, data
-  
-  #if options.data?
-  #  req.write JSON.stringify data
   req.end JSON.stringify options.data
 
 
@@ -53,37 +40,53 @@ request = (options={}, callback) ->
 describe 'Test Submission', ->
   server = undefined
   
+  
   before_all (done) ->
     server = require '../../lib/server'
     server.main.start undefined, done
   
-  before_each ->
-    opts =
-      #host: 'cling.leeolayvar.c9.io'
-      #port: 80
-      host: 'localhost'
-      port: 3003
-      headers: {}
   
-  it 'should accept any code', (done) ->
+  it 'should accept source', (done) ->
+    
     request
       path: '/api/tests'
       method: 'POST'
       headers:
         'Content-Type': 'application/json'
       data:
-        foo: 'bar'
+        source: 'foo'
       
       (err, res, data) ->
         data = JSON.parse data
         
         res.statusCode.should.equal 200
-        data.should.eql hello: 'world'
+        data.should.eql id: 1
         
         done()
   
+  
+  it 'should fail with badly formatted requests', (done) ->
+    
+    request
+      path: '/api/tests'
+      method: 'POST'
+      headers:
+        'Content-Type': 'application/json'
+      data: {}
+      
+      (err, res, data) ->
+        if err then throw err
+        
+        res.statusCode.should.equal 400
+        data.should.equal 'Missing required argument "source".'
+        
+        done()
+  
+  
+  
   after_all ->
     server.main.end()
+  
 
 
 

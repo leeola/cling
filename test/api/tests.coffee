@@ -13,11 +13,11 @@ require '../options'
 
 request = (options={}, callback) ->
   if process.env.C9_USER?
-    options.host ?= "#{process.env.C9_PROJECT}.#{process.env.C9_USER}.c9.io"
-    options.port ?= 80
+    #options.host ?= "#{process.env.C9_PROJECT}.#{process.env.C9_USER}.c9.io"
+    options.port ?= process.env.C9_PORT
   else
-    options.host ?= 'localhost'
     options.port ?= 3003
+  options.host ?= 'localhost'
   options.path ?= '/'
   options.method ?= 'GET'
   options.headers ?= {}

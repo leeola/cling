@@ -58,9 +58,4 @@ class Sandbox
 
 
 
-# A temporary hack so i have access to it.
-window.Sandbox = Sandbox
-
-
-
 exports.Sandbox

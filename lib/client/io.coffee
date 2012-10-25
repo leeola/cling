@@ -4,13 +4,14 @@
 # Copyright (c) 2012 Lee Olayvar <leeolayvar@gmail.com>
 # MIT Licensed
 #
-jquery = require 'jquery-browserify'
-io = require 'socket.io-client'
 
 
 
 
 connect = ->
+  jquery = require 'jquery-browserify'
+  io = require 'socket.io-client'
+
   jquery('#status .value').text 'connecting..'
   
   # Grab our connection object.

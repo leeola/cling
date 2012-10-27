@@ -38,15 +38,15 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "commentsOnly": true,
           "name": "Markdown"
         },
-        "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/CHANGELOG.md",
-        "projectPath": "CHANGELOG.md",
-        "targetPath": "CHANGELOG",
+        "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/HISTORY.md",
+        "projectPath": "HISTORY.md",
+        "targetPath": "HISTORY",
         "firstHeader": {
           "type": "heading",
           "data": {
             "level": 1,
-            "title": "Change Log",
-            "slug": "change-log",
+            "title": "History",
+            "slug": "history",
             "isFileHeader": true
           },
           "depth": 1,
@@ -62,7 +62,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             }
           ]
         },
-        "title": "Change Log"
+        "title": "History"
       },
       "depth": 1,
       "outline": [

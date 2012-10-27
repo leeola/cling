@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="en"><head><title>bin/node/bin</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../"><meta name="groc-document-path" content="bin/node/bin"><meta name="groc-project-path" content="bin/node/bin.coffee"><link rel="stylesheet" type="text/css" media="all" href="../../assets/style.css"><script type="text/javascript" src="../../assets/behavior.js"></script><body><div id="meta"><div class="file-path">bin/node/bin.coffee</div></div><div id="document"><div class="segment"><div class="comments"><div class="wrapper"><h1 id="node-cli-api">Node CLI-API</h1>
+
+<p>This file exposes the CLI-API, which is the single function <code>exec()</code>.
+For further explanation, see the <code>exec()</code> documentation below.</p></div></div><div class="code"><div class="wrapper"><span class="nv">fs = </span><span class="nx">require</span> <span class="s">&#39;fs&#39;</span>
+<span class="nv">path = </span><span class="nx">require</span> <span class="s">&#39;path&#39;</span>
+<span class="nv">nomnom = </span><span class="nx">require</span> <span class="s">&#39;nomnom&#39;</span>
+<span class="nv">lib_main = </span><span class="nx">require</span> <span class="s">&#39;../../lib/main&#39;</span></div></div></div><div class="segment"><div class="comments"><div class="wrapper"><p>A node version regression fix.</p></div></div><div class="code"><div class="wrapper"><span class="k">if</span> <span class="nx">path</span><span class="p">.</span><span class="nx">existsSync</span><span class="o">?</span>
+  <span class="nv">existsSync = </span><span class="nx">path</span><span class="p">.</span><span class="nx">existsSync</span>
+<span class="k">else</span>
+  <span class="nv">existsSync = </span><span class="nx">fs</span><span class="p">.</span><span class="nx">existsSync</span></div></div></div><div class="segment"><div class="comments"><div class="wrapper"><h2 id="cli-options">CLI Options</h2>
+
+<p><strong>Note:</strong> In near future, this will hopefully be replaced with a
+sister-project</p></div></div><div class="code"><div class="wrapper"><span class="nx">nomnom</span><span class="p">.</span><span class="nx">script</span> <span class="s">&#39;cling&#39;</span>
+<span class="nx">nomnom</span><span class="p">.</span><span class="nx">help</span> <span class="s">&#39;Start the cling server.&#39;</span>
+<span class="nx">nomnom</span><span class="p">.</span><span class="nx">options</span>
+  <span class="nv">location:</span>
+    <span class="nv">default: </span><span class="s">&#39;localhost&#39;</span>
+    <span class="nv">abbr: </span><span class="s">&#39;l&#39;</span>
+    <span class="nv">metavar: </span><span class="s">&#39;LOCATION&#39;</span>
+    <span class="nv">help: </span><span class="s">&#39;Specify a hostname for cling to listen on.&#39;</span>
+  
+  <span class="nv">port:</span>
+    <span class="nv">default: </span><span class="mi">3003</span>
+    <span class="nv">abbr: </span><span class="s">&#39;p&#39;</span>
+    <span class="nv">metavar: </span><span class="s">&#39;PORT&#39;</span>
+    <span class="nv">help: </span><span class="s">&#39;Specify a port for cling to listen on.&#39;</span></div></div></div><div class="segment"><div class="comments"><div class="wrapper"><h2 id="cli-interface">CLI Interface</h2>
+
+<p>Start cling based on the arguments provided by either <code>process.argv</code>
+or the <code>input</code> argument.</p>
+
+<p><strong>Note:</strong> This function will be rewritten with a CLI option parser soon,
+allowing this to accept and return predictable input.</p>
+
+<p>([input]) -> undefined</p>
+
+<ul>
+<li>Params
+<ul><li>input: Optional. A list of values to parse <em>in place of</em> process.argv.</li></ul></li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="nv">exec = </span><span class="nf">(input) -&gt;</span>
+  <span class="nv">opts = </span><span class="nx">nomnom</span><span class="p">.</span><span class="nx">parse</span> <span class="nx">input</span>
+  
+  <span class="nx">lib_main</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="nx">opts</span><span class="p">)</span>
+
+
+
+<span class="nv">exports.exec = </span><span class="nx">exec</span></div></div></div></div></body></html>

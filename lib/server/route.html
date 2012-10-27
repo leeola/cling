@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="en"><head><title>lib/server/route</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../"><meta name="groc-document-path" content="lib/server/route"><meta name="groc-project-path" content="lib/server/route.coffee"><link rel="stylesheet" type="text/css" media="all" href="../../assets/style.css"><script type="text/javascript" src="../../assets/behavior.js"></script><body><div id="meta"><div class="file-path">lib/server/route.coffee</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="c1">#</span></div></div></div><div class="segment"><div class="comments"><div class="wrapper"><p>lib/server/route.coffee</p></div></div><div class="code"><div class="wrapper"><span class="c1">#</span></div></div></div><div class="segment"><div class="comments"><div class="wrapper"><p>Copyright (c) 2012 Lee Olayvar <a href="&#109;&#97;&#105;&#x6C;&#116;&#x6F;:&#x6C;&#101;e&#111;&#108;&#97;&#x79;&#x76;&#x61;r&#x40;&#103;&#109;&#x61;i&#108;&#x2E;&#99;&#111;&#109;">&#x6C;&#101;e&#111;&#108;&#97;&#x79;&#x76;&#x61;r&#x40;&#103;&#109;&#x61;i&#108;&#x2E;&#99;&#111;&#109;</a>
+MIT Licensed</p></div></div><div class="code"><div class="wrapper"><span class="c1">#</span>
+<span class="nv">lib = </span><span class="nx">require</span> <span class="s">&#39;..&#39;</span>
+<span class="nv">app = </span><span class="nx">require</span> <span class="s">&#39;./app&#39;</span>
+<span class="nv">views = </span><span class="p">(</span><span class="nx">require</span> <span class="s">&#39;./views&#39;</span><span class="p">).</span><span class="nx">load</span><span class="p">()</span></div></div></div><div class="segment"><div class="comments"><div class="wrapper"><p>Our browser client home.</p></div></div><div class="code"><div class="wrapper"><span class="nx">app</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span class="nx">get</span> <span class="s">&#39;/&#39;</span><span class="p">,</span> <span class="nf">() -&gt;</span>
+  <span class="nx">@res</span><span class="p">.</span><span class="nx">writeHead</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="s">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s">&#39;text/html&#39;</span>
+  <span class="nx">@res</span><span class="p">.</span><span class="nx">end</span> <span class="nx">views</span><span class="p">.</span><span class="nx">base</span>
+
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span class="nx">get</span> <span class="s">&#39;/api&#39;</span><span class="p">,</span> <span class="o">-&gt;</span>
+  <span class="nx">@res</span><span class="p">.</span><span class="nx">writeHead</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="s">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s">&#39;text/plain&#39;</span>
+  <span class="nx">@res</span><span class="p">.</span><span class="nx">end</span> <span class="s">&#39;API Stuffs&#39;</span>
+
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span class="nx">get</span> <span class="s">&#39;/api/clients&#39;</span><span class="p">,</span> <span class="o">-&gt;</span>
+  <span class="nx">@res</span><span class="p">.</span><span class="nx">writeHead</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="s">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s">&#39;text/plain&#39;</span>
+  <span class="nx">@res</span><span class="p">.</span><span class="nx">end</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span> <span class="p">{}</span>
+
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span class="nx">get</span> <span class="s">&#39;/api/history&#39;</span><span class="p">,</span> <span class="o">-&gt;</span>
+  <span class="nx">@res</span><span class="p">.</span><span class="nx">writeHead</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="s">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s">&#39;text/plain&#39;</span>
+  <span class="nx">@res</span><span class="p">.</span><span class="nx">end</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span> <span class="p">{}</span>
+
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span class="nx">get</span> <span class="s">&#39;/api/tests&#39;</span><span class="p">,</span> <span class="o">-&gt;</span>
+  <span class="nx">@res</span><span class="p">.</span><span class="nx">writeHead</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="s">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s">&#39;text/plain&#39;</span>
+  <span class="nx">@res</span><span class="p">.</span><span class="nx">end</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span> <span class="p">{}</span>
+
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span class="nx">post</span> <span class="s">&#39;/api/tests&#39;</span><span class="p">,</span> <span class="o">-&gt;</span>
+  <span class="nv">body = </span><span class="nx">@req</span><span class="p">.</span><span class="nx">body</span>
+  </div></div></div><div class="segment"><div class="comments"><div class="wrapper"><p>Required</p></div></div><div class="code"><div class="wrapper">  <span class="k">if</span> <span class="o">not</span> <span class="nx">body</span><span class="p">.</span><span class="nx">source</span><span class="o">?</span>
+    <span class="nx">@res</span><span class="p">.</span><span class="nx">writeHead</span> <span class="mi">400</span><span class="p">,</span>
+      <span class="s">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s">&#39;text/plain&#39;</span>
+    <span class="nx">@res</span><span class="p">.</span><span class="nx">end</span> <span class="s">&#39;Missing required argument &quot;source&quot;.&#39;</span>
+    <span class="k">return</span>
+  </div></div></div><div class="segment"><div class="comments"><div class="wrapper"><p>Do some lib work here to queue the test</p></div></div><div class="code"><div class="wrapper">  <span class="nv">rdata = </span><span class="p">{}</span>
+  
+  <span class="nx">@res</span><span class="p">.</span><span class="nx">writeHead</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="s">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s">&#39;application/json&#39;</span>
+  <span class="nx">@res</span><span class="p">.</span><span class="nx">end</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span> <span class="nx">rdata</span></div></div></div></div></body></html>

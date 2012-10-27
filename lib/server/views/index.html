@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en"><head><title>lib/server/views/index</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../../"><meta name="groc-document-path" content="lib/server/views/index"><meta name="groc-project-path" content="lib/server/views/index.coffee"><link rel="stylesheet" type="text/css" media="all" href="../../../assets/style.css"><script type="text/javascript" src="../../../assets/behavior.js"></script><body><div id="meta"><div class="file-path">lib/server/views/index.coffee</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="c1">#</span></div></div></div><div class="segment"><div class="comments"><div class="wrapper"><p>lib/server/views/index.coffee</p></div></div><div class="code"><div class="wrapper"><span class="c1">#</span></div></div></div><div class="segment"><div class="comments"><div class="wrapper"><p>A simple and rather ugly template loader.</p></div></div><div class="code"><div class="wrapper"><span class="c1">#</span></div></div></div><div class="segment"><div class="comments"><div class="wrapper"><p>Copyright (c) 2012 Lee Olayvar <a href="&#109;&#x61;&#x69;&#x6C;&#x74;&#111;:&#x6C;&#101;&#101;&#111;&#x6C;a&#121;&#118;&#97;&#x72;&#64;&#x67;&#109;a&#105;&#x6C;&#x2E;&#99;&#111;&#x6D;">&#x6C;&#101;&#101;&#111;&#x6C;a&#121;&#118;&#97;&#x72;&#64;&#x67;&#109;a&#105;&#x6C;&#x2E;&#99;&#111;&#x6D;</a>
+MIT Licensed</p></div></div><div class="code"><div class="wrapper"><span class="c1">#</span>
+<span class="nv">fs = </span><span class="nx">require</span> <span class="s">&#39;fs&#39;</span>
+
+
+
+
+<span class="nv">base = </span><span class="kc">undefined</span>
+
+
+<span class="nv">load = </span><span class="o">-&gt;</span></div></div></div><div class="segment"><div class="comments"><div class="wrapper"><p>We're just going to load them all at once, in sync, on app load. No error
+catching or anything stable for now.</p></div></div><div class="code"><div class="wrapper">  <span class="k">if</span> <span class="o">not</span> <span class="nx">base</span><span class="o">?</span>
+    <span class="nv">base = </span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span> <span class="s">&quot;</span><span class="si">#{</span><span class="nx">__dirname</span><span class="si">}</span><span class="s">/base.html&quot;</span><span class="p">,</span> <span class="s">&#39;utf-8&#39;</span>
+
+
+
+
+<span class="nv">exports.base = </span><span class="nx">base</span>
+<span class="nv">exports.load = </span><span class="nx">load</span></div></div></div></div></body></html>

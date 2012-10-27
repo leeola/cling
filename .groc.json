@@ -1,0 +1,14 @@
+{
+  "glob": [
+    "./**/*.js",
+    "./**/*.coffee",
+    "README.md",
+    "HISTORY.md"
+    ],
+  "except": [
+    "./node_modules/**",
+    "./test/**"
+    ],
+  "out": "../docs",
+  "repository-url": "https://github.com/leeolayvar/cling"
+}

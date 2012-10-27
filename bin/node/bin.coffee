@@ -1,11 +1,9 @@
-#
-# bin/node/bin.coffee
-#
-# The node command line entry point.
-#
-# Copyright (c) 2012 Lee Olayvar <leeolayvar@gmail.com>
-# MIT Licensed
-#
+# 
+# # Node CLI-API
+# 
+# This file exposes the CLI-API, which is the single function `exec()`.
+# For further explanation, see the `exec()` documentation below.
+# 
 fs = require 'fs'
 path = require 'path'
 nomnom = require 'nomnom'
@@ -13,7 +11,7 @@ lib_main = require '../../lib/main'
 
 
 
-# A node version fix.
+# A node version regression fix.
 if path.existsSync?
   existsSync = path.existsSync
 else
@@ -21,7 +19,10 @@ else
 
 
 
-
+# ## CLI Options
+# 
+# **Note:** In near future, this will hopefully be replaced with a
+# sister-project
 nomnom.script 'cling'
 nomnom.help 'Start the cling server.'
 nomnom.options
@@ -39,20 +40,22 @@ nomnom.options
 
 
 
+# ## CLI Interface
+# 
+# Start cling based on the arguments provided by either `process.argv`
+# or the `input` argument.
+# 
+# **Note:** This function will be rewritten with a CLI option parser soon,
+# allowing this to accept and return predictable input.
+# 
 # ([input]) -> undefined
-#
-# Params:
-#   input: Optional. A list of values to parse *in place of* process.argv.
-#
-# Desc:
-#   Execute a dork test based on the arguments provided by either
-#   `process.argv` or the `input` argument.
+# 
+# - Params
+#   - input: Optional. A list of values to parse *in place of* process.argv.
 exec = (input) ->
-  # Parse the opts, with a possible input override.
   opts = nomnom.parse input
   
   lib_main.start(opts)
-
 
 
 

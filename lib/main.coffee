@@ -1,9 +1,9 @@
-#
+# 
 # lib/main.coffee
-#
+# 
 # Copyright (c) 2012 Lee Olayvar <leeolayvar@gmail.com>
 # MIT Licensed
-#
+# 
 winston = require 'winston'
 server = require './server'
 
@@ -11,7 +11,7 @@ server = require './server'
 
 
 # (options) -> undefined
-#
+# 
 # Desc:
 #   Start the Cling server.
 start = (options) ->

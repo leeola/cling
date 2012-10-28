@@ -38,7 +38,7 @@ describe 'Test Submission', ->
   
   
   before_all (done) ->
-    server = require '../../lib/server'
+    server = require '../../server'
     server.main.start undefined, done
   
   

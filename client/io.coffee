@@ -1,9 +1,8 @@
-#
-# lib/client/io.coffee
-#
-# Copyright (c) 2012 Lee Olayvar <leeolayvar@gmail.com>
-# MIT Licensed
-#
+# 
+# # Socket.IO Client
+# 
+# The client side Socket IO code.
+# 
 
 
 

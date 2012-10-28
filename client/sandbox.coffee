@@ -1,9 +1,8 @@
-#
-# lib/client/sandbox.coffee
-#
-# Copyright (c) 2012 Lee Olayvar <leeolayvar@gmail.com>
-# MIT Licensed
-#
+# 
+# # Sandbox
+# 
+# Code pertaining to a generic Sandboxing function.
+# 
 
 
 
@@ -24,7 +23,7 @@ this.console = {log: parent.__cling.log}
 """
 
 
-
+# A class which allows for code isolation inside of an iframe.
 class Sandbox
   constructor: ->
     @_log =

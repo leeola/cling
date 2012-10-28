@@ -1,9 +1,10 @@
-#
-# lib/config.coffee
-#
-# Copyright (c) 2012 Lee Olayvar <leeolayvar@gmail.com>
-# MIT Licensed
-#
+# 
+# # Default Config
+# 
+# The default config for this app.
+# 
+# **Note:** This should *not* be changed by the user.
+# 
 path = require 'path'
 
 

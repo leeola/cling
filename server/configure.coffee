@@ -1,9 +1,8 @@
-#
-# lib/server/configure.coffee
-#
-# Copyright (c) 2012 Lee Olayvar <leeolayvar@gmail.com>
-# MIT Licensed
-#
+# 
+# # App Configure
+# 
+# Configure the app with settings and middleware.
+# 
 path = require 'path'
 flatiron = require 'flatiron'
 browserify = require 'browserify'

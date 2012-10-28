@@ -1,10 +1,9 @@
+# 
+# # App Router
+# 
+# Route incoming connections to the app based on the rules laid out in this
+# module.
 #
-# lib/server/route.coffee
-#
-# Copyright (c) 2012 Lee Olayvar <leeolayvar@gmail.com>
-# MIT Licensed
-#
-lib = require '..'
 app = require './app'
 views = (require './views').load()
 

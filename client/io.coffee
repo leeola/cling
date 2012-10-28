@@ -1,5 +1,5 @@
 # 
-# # Socket IO
+# # Socket.IO Client
 # 
 # The client side Socket IO code.
 # 

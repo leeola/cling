@@ -1,9 +1,9 @@
-#
-# lib/server/io.coffee
-#
-# Copyright (c) 2012 Lee Olayvar <leeolayvar@gmail.com>
-# MIT Licensed
-#
+# 
+# # Socket.IO Server
+# 
+# Load socket.io and start the io server. This module structure needs
+# reformatting.
+# 
 io = require 'socket.io'
 app = require './app'
 

@@ -1,13 +1,12 @@
-#
-# lib/index.coffee
-#
-# Copyright (c) 2012 Lee Olayvar <leeolayvar@gmail.com>
-# MIT Licensed
-#
+# 
+# # Cling Library
+# 
+# The library file linked from package.json, and the import point for any
+# module using `require('cling');`.
+# 
 
 
 
 
-exports.client = require './client'
-exports.main = require './main'
-exports.server = require './server'
+exports.client = require '../client'
+exports.server = require '../server'

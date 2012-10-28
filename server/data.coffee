@@ -1,12 +1,9 @@
-#
-# lib/data.coffee
-#
+# 
+# # Temporary Storage
+# 
 # For simplicities sake, we store our data in this module. Obviously this is
-# not a stable storage solution, but for now that does not matter.
-#
-# Copyright (c) 2012 Lee Olayvar <leeolayvar@gmail.com>
-# MIT Licensed
-#
+# not a permanent storage solution, but for now that does not matter.
+# 
 
 
 

@@ -1,11 +1,10 @@
-#
-# lib/server/main.coffee
-#
-# Copyright (c) 2012 Lee Olayvar <leeolayvar@gmail.com>
-# MIT Licensed
-#
+# 
+# # Server Main
+# 
+# The main control functions for this server.
+# 
 winston = require 'winston'
-config = (require '../config').server
+config = (require './config').server
 app = require './app'
 
 

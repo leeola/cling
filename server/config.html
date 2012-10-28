@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="en"><head><title>server/config</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="server/config"><meta name="groc-project-path" content="server/config.coffee"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">server/config.coffee</div></div><div id="document"><div class="segment"><div class="comments"><div class="wrapper"><h1 id="default-config">Default Config</h1>
+
+<p>The default config for this app.</p>
+
+<p><strong>Note:</strong> This should <em>not</em> be changed by the user.</p></div></div><div class="code"><div class="wrapper"><span class="nv">path = </span><span class="nx">require</span> <span class="s">&#39;path&#39;</span></div></div></div><div class="segment"><div class="comments"><div class="wrapper"><p>Default CLI specific options.</p></div></div><div class="code"><div class="wrapper"><span class="nv">cli =</span>
+  <span class="nv">daemon: </span><span class="kc">false</span></div></div></div><div class="segment"><div class="comments"><div class="wrapper"><p>Default web config</p></div></div><div class="code"><div class="wrapper"><span class="nv">server =</span>
+  <span class="nv">port: </span><span class="k">if</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span><span class="o">?</span> <span class="k">then</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span> <span class="k">else</span> <span class="mi">3003</span>
+
+
+
+
+<span class="nv">exports.cli = </span><span class="nx">cli</span>
+<span class="nv">exports.server = </span><span class="nx">server</span></div></div></div></div></body></html>

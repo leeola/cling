@@ -214,118 +214,126 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
     }, {
       "type": "folder",
       "data": {
+        "path": "client",
+        "title": "client"
+      },
+      "depth": 1,
+      "children": [
+        {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".coffee"],
+              "pygmentsLexer": "coffee-script",
+              "singleLineComment": ["#"],
+              "name": "CoffeeScript"
+            },
+            "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/client/index.coffee",
+            "projectPath": "client/index.coffee",
+            "targetPath": "client/index",
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Client Library",
+                "slug": "client-library",
+                "isFileHeader": true
+              },
+              "depth": 1
+            },
+            "title": "Client Library"
+          },
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".coffee"],
+              "pygmentsLexer": "coffee-script",
+              "singleLineComment": ["#"],
+              "name": "CoffeeScript"
+            },
+            "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/client/io.coffee",
+            "projectPath": "client/io.coffee",
+            "targetPath": "client/io",
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Socket.IO Client",
+                "slug": "socketio-client",
+                "isFileHeader": true
+              },
+              "depth": 1
+            },
+            "title": "Socket.IO Client"
+          },
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".coffee"],
+              "pygmentsLexer": "coffee-script",
+              "singleLineComment": ["#"],
+              "name": "CoffeeScript"
+            },
+            "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/client/main.coffee",
+            "projectPath": "client/main.coffee",
+            "targetPath": "client/main",
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Entry Point",
+                "slug": "entry-point",
+                "isFileHeader": true
+              },
+              "depth": 1
+            },
+            "title": "Entry Point"
+          },
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".coffee"],
+              "pygmentsLexer": "coffee-script",
+              "singleLineComment": ["#"],
+              "name": "CoffeeScript"
+            },
+            "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/client/sandbox.coffee",
+            "projectPath": "client/sandbox.coffee",
+            "targetPath": "client/sandbox",
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Sandbox",
+                "slug": "sandbox",
+                "isFileHeader": true
+              },
+              "depth": 1
+            },
+            "title": "Sandbox"
+          },
+          "depth": 2,
+          "outline": []
+        }
+      ]
+    }, {
+      "type": "folder",
+      "data": {
         "path": "lib",
         "title": "lib"
       },
       "depth": 1,
       "children": [
         {
-          "type": "folder",
-          "data": {
-            "path": "lib/client",
-            "title": "client"
-          },
-          "depth": 2,
-          "children": [
-            {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".coffee"],
-                  "pygmentsLexer": "coffee-script",
-                  "singleLineComment": ["#"],
-                  "name": "CoffeeScript"
-                },
-                "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/lib/client/index.coffee",
-                "projectPath": "lib/client/index.coffee",
-                "targetPath": "lib/client/index",
-                "title": "index"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".coffee"],
-                  "pygmentsLexer": "coffee-script",
-                  "singleLineComment": ["#"],
-                  "name": "CoffeeScript"
-                },
-                "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/lib/client/io.coffee",
-                "projectPath": "lib/client/io.coffee",
-                "targetPath": "lib/client/io",
-                "title": "io"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".coffee"],
-                  "pygmentsLexer": "coffee-script",
-                  "singleLineComment": ["#"],
-                  "name": "CoffeeScript"
-                },
-                "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/lib/client/main.coffee",
-                "projectPath": "lib/client/main.coffee",
-                "targetPath": "lib/client/main",
-                "title": "main"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".coffee"],
-                  "pygmentsLexer": "coffee-script",
-                  "singleLineComment": ["#"],
-                  "name": "CoffeeScript"
-                },
-                "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/lib/client/sandbox.coffee",
-                "projectPath": "lib/client/sandbox.coffee",
-                "targetPath": "lib/client/sandbox",
-                "title": "sandbox"
-              },
-              "depth": 3,
-              "outline": []
-            }
-          ]
-        }, {
-          "type": "file",
-          "data": {
-            "language": {
-              "nameMatchers": [".coffee"],
-              "pygmentsLexer": "coffee-script",
-              "singleLineComment": ["#"],
-              "name": "CoffeeScript"
-            },
-            "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/lib/config.coffee",
-            "projectPath": "lib/config.coffee",
-            "targetPath": "lib/config",
-            "title": "config"
-          },
-          "depth": 2,
-          "outline": []
-        }, {
-          "type": "file",
-          "data": {
-            "language": {
-              "nameMatchers": [".coffee"],
-              "pygmentsLexer": "coffee-script",
-              "singleLineComment": ["#"],
-              "name": "CoffeeScript"
-            },
-            "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/lib/data.coffee",
-            "projectPath": "lib/data.coffee",
-            "targetPath": "lib/data",
-            "title": "data"
-          },
-          "depth": 2,
-          "outline": []
-        }, {
           "type": "file",
           "data": {
             "language": {
@@ -337,7 +345,53 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/lib/index.coffee",
             "projectPath": "lib/index.coffee",
             "targetPath": "lib/index",
-            "title": "index"
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Cling Library",
+                "slug": "cling-library",
+                "isFileHeader": true
+              },
+              "depth": 1
+            },
+            "title": "Cling Library"
+          },
+          "depth": 2,
+          "outline": []
+        }
+      ]
+    }, {
+      "type": "folder",
+      "data": {
+        "path": "server",
+        "title": "server"
+      },
+      "depth": 1,
+      "children": [
+        {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".coffee"],
+              "pygmentsLexer": "coffee-script",
+              "singleLineComment": ["#"],
+              "name": "CoffeeScript"
+            },
+            "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/server/app.coffee",
+            "projectPath": "server/app.coffee",
+            "targetPath": "server/app",
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "App Storage",
+                "slug": "app-storage",
+                "isFileHeader": true
+              },
+              "depth": 1
+            },
+            "title": "App Storage"
           },
           "depth": 2,
           "outline": []
@@ -350,18 +404,184 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "singleLineComment": ["#"],
               "name": "CoffeeScript"
             },
-            "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/lib/main.coffee",
-            "projectPath": "lib/main.coffee",
-            "targetPath": "lib/main",
-            "title": "main"
+            "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/server/config.coffee",
+            "projectPath": "server/config.coffee",
+            "targetPath": "server/config",
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Default Config",
+                "slug": "default-config",
+                "isFileHeader": true
+              },
+              "depth": 1
+            },
+            "title": "Default Config"
+          },
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".coffee"],
+              "pygmentsLexer": "coffee-script",
+              "singleLineComment": ["#"],
+              "name": "CoffeeScript"
+            },
+            "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/server/configure.coffee",
+            "projectPath": "server/configure.coffee",
+            "targetPath": "server/configure",
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "App Configure",
+                "slug": "app-configure",
+                "isFileHeader": true
+              },
+              "depth": 1
+            },
+            "title": "App Configure"
+          },
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".coffee"],
+              "pygmentsLexer": "coffee-script",
+              "singleLineComment": ["#"],
+              "name": "CoffeeScript"
+            },
+            "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/server/data.coffee",
+            "projectPath": "server/data.coffee",
+            "targetPath": "server/data",
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Temporary Storage",
+                "slug": "temporary-storage",
+                "isFileHeader": true
+              },
+              "depth": 1
+            },
+            "title": "Temporary Storage"
+          },
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".coffee"],
+              "pygmentsLexer": "coffee-script",
+              "singleLineComment": ["#"],
+              "name": "CoffeeScript"
+            },
+            "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/server/index.coffee",
+            "projectPath": "server/index.coffee",
+            "targetPath": "server/index",
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Index",
+                "slug": "index",
+                "isFileHeader": true
+              },
+              "depth": 1
+            },
+            "title": "Index"
+          },
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".coffee"],
+              "pygmentsLexer": "coffee-script",
+              "singleLineComment": ["#"],
+              "name": "CoffeeScript"
+            },
+            "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/server/io.coffee",
+            "projectPath": "server/io.coffee",
+            "targetPath": "server/io",
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Socket.IO Server",
+                "slug": "socketio-server",
+                "isFileHeader": true
+              },
+              "depth": 1
+            },
+            "title": "Socket.IO Server"
+          },
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".coffee"],
+              "pygmentsLexer": "coffee-script",
+              "singleLineComment": ["#"],
+              "name": "CoffeeScript"
+            },
+            "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/server/main.coffee",
+            "projectPath": "server/main.coffee",
+            "targetPath": "server/main",
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Server Main",
+                "slug": "server-main",
+                "isFileHeader": true
+              },
+              "depth": 1
+            },
+            "title": "Server Main"
+          },
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".coffee"],
+              "pygmentsLexer": "coffee-script",
+              "singleLineComment": ["#"],
+              "name": "CoffeeScript"
+            },
+            "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/server/route.coffee",
+            "projectPath": "server/route.coffee",
+            "targetPath": "server/route",
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "App Router",
+                "slug": "app-router",
+                "isFileHeader": true
+              },
+              "depth": 1
+            },
+            "title": "App Router"
           },
           "depth": 2,
           "outline": []
         }, {
           "type": "folder",
           "data": {
-            "path": "lib/server",
-            "title": "server"
+            "path": "server/views",
+            "title": "views"
           },
           "depth": 2,
           "children": [
@@ -374,119 +594,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "singleLineComment": ["#"],
                   "name": "CoffeeScript"
                 },
-                "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/lib/server/app.coffee",
-                "projectPath": "lib/server/app.coffee",
-                "targetPath": "lib/server/app",
-                "title": "app"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".coffee"],
-                  "pygmentsLexer": "coffee-script",
-                  "singleLineComment": ["#"],
-                  "name": "CoffeeScript"
-                },
-                "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/lib/server/configure.coffee",
-                "projectPath": "lib/server/configure.coffee",
-                "targetPath": "lib/server/configure",
-                "title": "configure"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".coffee"],
-                  "pygmentsLexer": "coffee-script",
-                  "singleLineComment": ["#"],
-                  "name": "CoffeeScript"
-                },
-                "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/lib/server/index.coffee",
-                "projectPath": "lib/server/index.coffee",
-                "targetPath": "lib/server/index",
+                "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/server/views/index.coffee",
+                "projectPath": "server/views/index.coffee",
+                "targetPath": "server/views/index",
                 "title": "index"
               },
               "depth": 3,
               "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".coffee"],
-                  "pygmentsLexer": "coffee-script",
-                  "singleLineComment": ["#"],
-                  "name": "CoffeeScript"
-                },
-                "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/lib/server/io.coffee",
-                "projectPath": "lib/server/io.coffee",
-                "targetPath": "lib/server/io",
-                "title": "io"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".coffee"],
-                  "pygmentsLexer": "coffee-script",
-                  "singleLineComment": ["#"],
-                  "name": "CoffeeScript"
-                },
-                "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/lib/server/main.coffee",
-                "projectPath": "lib/server/main.coffee",
-                "targetPath": "lib/server/main",
-                "title": "main"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".coffee"],
-                  "pygmentsLexer": "coffee-script",
-                  "singleLineComment": ["#"],
-                  "name": "CoffeeScript"
-                },
-                "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/lib/server/route.coffee",
-                "projectPath": "lib/server/route.coffee",
-                "targetPath": "lib/server/route",
-                "title": "route"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "folder",
-              "data": {
-                "path": "lib/server/views",
-                "title": "views"
-              },
-              "depth": 3,
-              "children": [
-                {
-                  "type": "file",
-                  "data": {
-                    "language": {
-                      "nameMatchers": [".coffee"],
-                      "pygmentsLexer": "coffee-script",
-                      "singleLineComment": ["#"],
-                      "name": "CoffeeScript"
-                    },
-                    "sourcePath": "/var/lib/stickshift/d49c7ef441f242ababfd8646c1820a5f/app-root/data/299805/repo/lib/server/views/index.coffee",
-                    "projectPath": "lib/server/views/index.coffee",
-                    "targetPath": "lib/server/views/index",
-                    "title": "index"
-                  },
-                  "depth": 4,
-                  "outline": []
-                }
-              ]
             }
           ]
         }

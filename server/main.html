@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="en"><head><title>server/main</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="server/main"><meta name="groc-project-path" content="server/main.coffee"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">server/main.coffee</div></div><div id="document"><div class="segment"><div class="comments"><div class="wrapper"><h1 id="server-main">Server Main</h1>
+
+<p>The main control functions for this server.</p></div></div><div class="code"><div class="wrapper"><span class="nv">winston = </span><span class="nx">require</span> <span class="s">&#39;winston&#39;</span>
+<span class="nv">config = </span><span class="p">(</span><span class="nx">require</span> <span class="s">&#39;./config&#39;</span><span class="p">).</span><span class="nx">server</span>
+<span class="nv">app = </span><span class="nx">require</span> <span class="s">&#39;./app&#39;</span>
+
+
+
+
+<span class="nv">end = </span><span class="o">-&gt;</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">server</span><span class="p">.</span><span class="nx">close</span><span class="p">()</span></div></div></div><div class="segment"><div class="comments"><div class="wrapper"><p>(port) -> undefined</p></div></div><div class="code"><div class="wrapper"><span class="c1">#</span></div></div></div><div class="segment"><div class="comments"><div class="wrapper"><p>Params:
+  port: The port the web server is going to listen on.</p></div></div><div class="code"><div class="wrapper"><span class="c1">#</span></div></div></div><div class="segment"><div class="comments"><div class="wrapper"><p>Desc:
+  Start the web server.</p></div></div><div class="code"><div class="wrapper"><span class="nv">start = </span><span class="nf">(port=config.port, callback=-&gt;) -&gt;</span>
+  <span class="nx">winston</span><span class="p">.</span><span class="nx">info</span> <span class="s">&quot;Monitoring connections on port:</span><span class="si">#{</span><span class="nx">port</span><span class="si">}</span><span class="s">&quot;</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">start</span> <span class="nx">port</span><span class="p">,</span> <span class="nx">callback</span>
+  
+  </div></div></div><div class="segment"><div class="comments"><div class="wrapper"><p>We're setting up io <em>after</em> the app is started, because socket.io needs
+that.</p></div></div><div class="code"><div class="wrapper">  <span class="c1">#require &#39;./io&#39;</span>
+
+
+
+
+<span class="nv">exports.end = </span><span class="nx">end</span>
+<span class="nv">exports.start = </span><span class="nx">start</span></div></div></div></div></body></html>

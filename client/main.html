@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="en"><head><title>client/main</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="client/main"><meta name="groc-project-path" content="client/main.coffee"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">client/main.coffee</div></div><div id="document"><div class="segment"><div class="comments"><div class="wrapper"><h1 id="entry-point">Entry Point</h1>
+
+<p>This is a very bad module.</p>
+
+<p>Basically the whole module is being treated as an entry point, because
+Browserify currently does not give any indication to a module that it is
+being called directly.. that is to say, <code>require.main is module</code> is
+impossible at the moment. With that said, if this module is loaded, either
+by Browserify or in Nodejs via <code>require './main'</code>, this code will run.</p>
+
+<p>This can obviously have a negative impact if you import this module in
+Nodejs, such as via <code>require ./lib/client</code> for automated testing, and so
+this module is not included in ./index.coffee.</p></div></div><div class="code"><div class="wrapper"><span class="nv">jquery = </span><span class="nx">require</span> <span class="s">&#39;jquery-browserify&#39;</span></div></div></div><div class="segment"><div class="comments"><div class="wrapper"><p>Load our modules. If they're not loaded here, they will not be
+bundled by browserify.</p></div></div><div class="code"><div class="wrapper"><span class="nv">io = </span><span class="nx">require</span> <span class="s">&#39;./io&#39;</span>
+<span class="nx">require</span> <span class="s">&#39;./sandbox&#39;</span>
+
+
+
+<span class="k">if</span> <span class="nb">document</span><span class="o">?</span>
+  <span class="nx">jquery</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span> <span class="o">-&gt;</span>
+    <span class="nx">io</span><span class="p">.</span><span class="nx">connect</span><span class="p">()</span></div></div></div></div></body></html>

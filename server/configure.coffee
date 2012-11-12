@@ -32,5 +32,5 @@ app.http.before.push (req, res, next) ->
 # try and load `../client/main.coffee` and if this is a js file, it will try
 # and load `../client/main.js`
 app.http.before.push browserify "#{__dirname}/../client/main#{path.extname __filename}",
-  cache: "#{__dirname}/../../.browserify_cache.json"
+  cache: "#{__dirname}/../.browserify_cache.json"
   verbose: true

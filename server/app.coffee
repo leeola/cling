@@ -1,9 +1,8 @@
-#
-# lib/server/app.coffee
-#
-# Copyright (c) 2012 Lee Olayvar <leeolayvar@gmail.com>
-# MIT Licensed
-#
+# 
+# # App Storage
+# 
+# A simple app reuse module.
+# 
 flatiron = require 'flatiron'
 
 

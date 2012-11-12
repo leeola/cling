@@ -1,13 +1,10 @@
 #!/usr/bin/env node
-//
-// bin/cling.js
-//
-// The bin Cling entry point.
-//
-// Note that this file is in JavaScript because CoffeeScript is currently
-// unable to properly add hashbangs as this file has.
-//
-// Copyright (c) 2012 Lee Olayvar <leeolayvar@gmail.com>
-// MIT Licensed
-//
+// 
+// # Default Entry
+// 
+// Our default entry point via package.json. *(Once compiled, that is.)*
+// 
+// **Note:** that this file is in JavaScript because CoffeeScript is
+// currently unable to properly add hashbangs as this file has.
+// 
 require('./node/bin').exec()

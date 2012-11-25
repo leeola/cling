@@ -39,7 +39,7 @@ describe 'Test Submission', ->
   
   before_all (done) ->
     server = require '../../server'
-    server.main.start undefined, done
+    server.app.start undefined, done
   
   
   it 'should accept source', (done) ->
@@ -81,7 +81,7 @@ describe 'Test Submission', ->
   
   
   after_all ->
-    server.main.end()
+    server.app.stop()
   
 
 

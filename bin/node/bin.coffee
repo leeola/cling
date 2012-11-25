@@ -7,7 +7,7 @@
 fs = require 'fs'
 path = require 'path'
 nomnom = require 'nomnom'
-lib_main = require '../../lib/main'
+server = require '../../server'
 
 
 
@@ -55,7 +55,7 @@ nomnom.options
 exec = (input) ->
   opts = nomnom.parse input
   
-  lib_main.start(opts)
+  server.app.start(opts)
 
 
 
